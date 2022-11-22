@@ -1,20 +1,44 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher> -->
+
+
+  <ion-slides [options]="catSlideOpts">
+    <ion-slide swiperSlide *ngFor="let categorie of categories">
+      <img [src]="categorie.img" alt="" srcset="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-slides [options]="highlighSlideOpts">
+    <ion-slide swiperSlide *ngFor="let highlight of highlights">
+      <img [src]="highlight.img" alt="" srcset="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-text color="dark">
+    <b style="padding-left: 10px;">Featured</b>
+  </ion-text>
+
+  <ion-slides [options]="featuredSlideOpts">
+    <ion-slide swiperSlide *ngFor="let feature of featured" class="featured-slide" routerLink="/details">
+
+      <img [src]="feature.img" alt="" srcset="">
+
+      <div class="info">
+        <ion-text color="dark"><b> {{feature.name}} </b></ion-text>
+        <span>
+          <ion-icon name="star" color="success"></ion-icon>
+          <ion-text color="success"> {{feature.rating}} </ion-text>
+          {{feature.ratings}}
+        </span>
+        <span>
+          <ion-icon name="location-outline" color="success">{{feature.distance}}</ion-icon>
+        </span>
+      </div>
+
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>

@@ -24,3 +24,58 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// global.scss
+// @import '~swiper/scss';
+// @import '~@ionic/angular/css/ionic-swiper';
+// @import "~swiper/css";
+// @import "~swiper/css/free-mode";
+// @import "~swiper/css/pagination";
+
+// @import '~swiper/scss';
+// // @import '~swiper/scss/autoplay';
+// @import '~swiper/scss/FreeMode';
+// @import '~swiper/scss/pagination';
+// // @import '~swiper/scss/scrollbar';
+// // @import '~swiper/scss/zoom';
+// @import '~@ionic/angular/css/ionic-swiper';
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/assets/fonts/Quicksand-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Quicksand-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Quicksand-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Quicksand-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Quicksand-SemiBold.ttf');
+}
+
+:root {
+  --ion-text-color: #828585;
+  --ion-font-family:'Quicksand';
+}
