@@ -57,20 +57,17 @@ export class HomePage implements OnInit {
     } );
 
     // console.log(this.categories)
+  }
 
-    // refresh(ev: any) {
-    //   setTimeout(() => {
-    //     (ev as RefresherCustomEvent).detail.complete();
-    //   }, 3000);
-    // }
-
-
- }
-
+  doRefresh(ev: any) {
+    setTimeout(() => {
+      (ev as RefresherCustomEvent).target.complete();
+    }, 1000);
+  }
 
 }
 
-function refresh(ev: any, any: any) {
+function doRefresh(ev: any, any: any) {
   throw new Error('Function not implemented.');
 }
 
