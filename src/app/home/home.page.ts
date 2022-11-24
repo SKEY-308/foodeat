@@ -21,9 +21,9 @@ export class HomePage implements OnInit {
 
   catSlideOpts={
     freeMode: true,
-    slidesPerView: 3.5,
+    slidesPerView: 3.2,
     slidesOffsetBefore: 11,
-    spaceBetween: 10
+    spaceBetween: 8
   }
 
   highlighSlideOpts={
@@ -34,11 +34,12 @@ export class HomePage implements OnInit {
   }
 
   featuredSlideOpts={
-    slidesPerView: 1.2,
-    spaceBetween: 10,
-    freeMode: true,
+    slidesPerView: 1.05,
+    spaceBetween: 5,
+    loop: true,
+    centeredSlides: true,
+    // freeMode: true,
   }
-
 
   constructor(private http: HttpClient) {}
 
@@ -65,9 +66,16 @@ export class HomePage implements OnInit {
     }, 1000);
   }
 
+  showLocationDetail = false;
+
+  onScroll(ev: any){
+    const offset = ev.detail.scrollTop;
+    this.showLocationDetail = offset > 50;
+  }
+
 }
 
-function doRefresh(ev: any, any: any) {
-  throw new Error('Function not implemented.');
-}
+// function doRefresh(ev: any, any: any) {
+//   throw new Error('Function not implemented.');
+// }
 

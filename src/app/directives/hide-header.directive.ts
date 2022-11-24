@@ -26,6 +26,7 @@ export class HideHeaderDirective implements AfterViewInit {
     if (newPosition < -this.headerHeight) {
       newPosition = -this.headerHeight;
     }
+
     let newOpacity = 1 - (newPosition / -this.headerHeight);
 
     this.domCtrl.write(() => {
